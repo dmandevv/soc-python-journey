@@ -1,0 +1,4 @@
+soc-python-exercises/*
+soc-python-networking/*
+soc-python-tools/*
+!soc-python-exercises/README.md

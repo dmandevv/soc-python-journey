@@ -1,0 +1,3 @@
+[submodule "soc-python-networking"]
+	path = soc-python-networking
+	url = https://github.com/dmandevv/redteam-python-networking.git
