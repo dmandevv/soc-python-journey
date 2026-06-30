@@ -13,7 +13,7 @@ Central hub documenting my path into security — Python fundamentals, networkin
 |---|---|---|
 | 1 — Python Fundamentals | [soc-python-exercises/](soc-python-exercises) (submodule) | ✅ Complete |
 | 2 — Networking with Python | [soc-python-networking/](soc-python-networking) (submodule) | ✅ Complete |
-| 3 — Security+ in Python | TBD (submodule, once started) | Not started |
+| 3 — Security+ in Python | [soc-python-security-plus/](soc-python-security-plus) (submodule) | 🔄 In progress |
 | 4 — SOC Practice Labs | TBD | Not started |
 | 5 — First Role | — | Not started |
 

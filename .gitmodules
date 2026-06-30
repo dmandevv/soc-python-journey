@@ -4,3 +4,6 @@
 [submodule "soc-python-exercises"]
 	path = soc-python-exercises
 	url = https://github.com/dmandevv/soc-python-exercises.git
+[submodule "soc-python-security-plus"]
+	path = soc-python-security-plus
+	url = https://github.com/dmandevv/soc-python-security-plus.git
