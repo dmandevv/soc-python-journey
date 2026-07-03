@@ -23,7 +23,7 @@ Central hub documenting my path into security — Python fundamentals, networkin
 
 Studying for CompTIA Security+ domain by domain, and building a small Python tool for each concept to lock it in rather than just memorizing for the exam.
 
-- [ ] General Security Concepts — e.g. hashing/encryption tool
+- [x] General Security Concepts — hashing/encryption CLI (`hashing_encryption_cli.py`)
 - [ ] Threats, Vulnerabilities & Mitigations — e.g. log/IOC parser
 - [ ] Security Architecture — e.g. firewall rule simulator
 - [ ] Security Operations — e.g. alert triage script
