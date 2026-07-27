@@ -16,4 +16,4 @@ Documenting my path into cybersecurity — Python fundamentals, networking, and 
 | 3 — Network+ | [soc-python-networking/](soc-python-network-plus) (submodule) | 🔄 In progress |
 | 4 — Security+ | [soc-python-security-plus/](soc-python-security-plus) (submodule) | 🔄 In progress |
 | 5 — CCDL1 | Not started |
-| 6 — First Role | — | Not started |
+| 6 — SOC Home Lab | Not started |
