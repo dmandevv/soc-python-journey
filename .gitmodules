@@ -7,3 +7,9 @@
 [submodule "soc-python-security-plus"]
 	path = soc-python-security-plus
 	url = https://github.com/dmandevv/soc-python-security-plus.git
+[submodule "soc-python-network-plus"]
+	path = soc-python-network-plus
+	url = https://github.com/dmandevv/soc-python-network-plus.git
+[submodule "soc-python-homelab"]
+	path = soc-python-homelab
+	url = https://github.com/dmandevv/soc-python-homelab.git
