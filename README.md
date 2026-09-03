@@ -2,7 +2,7 @@
 
 Documenting my path into cybersecurity — Python fundamentals, networking, and tooling, building toward a SOC engineering career.
 
-**Goal:** SOC Engineer, starting with a SOC Analyst role.
+**Goal:** SOC Analyst role.
 **Background:** B.S. in Computer Science; previously worked at a monitoring station.
 
 ---
