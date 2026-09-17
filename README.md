@@ -16,4 +16,4 @@ Documenting my path into cybersecurity — Python fundamentals, networking, and 
 
 ## Home Lab
 
-Runs in parallel with the steps above, not sequentially — an incremental hardware/network build (see [soc-python-homelab](https://github.com/dmandevv/soc-python-homelab), submodule) that grows alongside the Network+, Security+, and CCDL1 work.
+Runs in parallel with the steps above, not sequentially — an incremental hardware/network build that grows alongside the Network+, Security+, and CCDL1 work. In progress.
