@@ -2,6 +2,8 @@
 
 Documenting my path into cybersecurity — Python fundamentals, networking, and tooling, building toward a SOC engineering career.
 
+**Day-to-day:** the [daily routine](daily-routine.md) sets what to work on each day and records where every track stands.
+
 ---
 
 ## Steps
