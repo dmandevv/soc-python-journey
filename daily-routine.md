@@ -8,35 +8,35 @@ Claude follows this file to pick up where things left off, and updates *Where th
 
 ## The shape of a day
 
-**The blocks are a continuous loop, not a daily reset.** Work down the list in order; a day ends wherever it ends, and the next session picks up at the **next** block. After block 4 it wraps to block 1.
+**The blocks are a continuous loop, not a daily reset.** Work down the list in order; a day ends wherever it ends, and the next session picks up at the **next** block. After block 3 it wraps to block 1.
 
 ```
-  1  Certification  →  2  Simulated lab  →  3  Troubleshooting  →  4  Homelab
-  ↑                                                                        │
-  └────────────────────────────────────────────────────────────────────────┘
+  1  Certification  →  2  Simulated lab  →  3  Homelab
+  ↑                                                  │
+  └──────────────────────────────────────────────────┘
 ```
 
 | Block | Track | Currently |
 |---|---|---|
 | **1** | **Certification** — one objective section of the current exam | **Network+** — the walkthrough in [soc-python-network-plus/objectives](https://github.com/dmandevv/soc-python-network-plus/tree/main/objectives) |
 | **2** | **Simulated lab** — one scenario, built and verified | **Packet Tracer** — queue below |
-| **3** | **Troubleshooting practice** — one exercise, **never on the homelab** | **Network+ Domain 5** — formats below |
-| **4** | **Homelab — 2 hours** | The build itself |
+| **3** | **Homelab — 2 hours**, built problem-first | The build itself, which **doubles as Domain 5 practice** |
 
 **The blocks are defined by role, not by tool,** so the structure outlives each exam. Block 1 follows the journey's step order — Network+ now, then Security+, then CCDL1 — and block 2 moves from Packet Tracer to Containerlab once Network+ is behind it.
 
-**Built 2026-09-10 around one goal: mostly hands-on learning.** **Restructured 2026-09-17:** block 3 was a homelab audit and became external troubleshooting practice, and **the homelab moved to last.**
+**Built 2026-09-10 around one goal: mostly hands-on learning.** **Restructured 2026-09-18 to three blocks:** troubleshooting practice folded into the homelab, because **a real build generates authentic faults without anything being deliberately broken.**
 
-**⚠️ The homelab is block 4 on purpose.** It needs no discipline and would happily consume a whole day. **Blocks 1 to 3 are the ones that only happen if they come first** — with block 3 no longer lab work, leaving the homelab third would have put a study block after the reward.
+**⚠️ The homelab is last on purpose.** It needs no discipline and would happily consume a whole day. **Blocks 1 and 2 are the ones that only happen if they come first.**
 
-- **The lab does not open until 1, 2 and 3 are done in the current pass.** Short blocks are fine; skipped ones are not.
-- **The three-day skip trigger applies to blocks 1 to 3.** Avoidance is not the lab's problem.
+- **The lab does not open until 1 and 2 are done in the current pass.** Short blocks are fine; skipped ones are not.
+- **The three-day skip trigger applies to blocks 1 and 2.** Avoidance is not the lab's problem.
+- **⚠️ The lab now counts as Domain 5 practice, which makes "lab time is study time" an easy rationalisation.** It isn't. Blocks 1 and 2 are unchanged.
 
 **⚠️ Do not restart at block 1 each session.** The *Where things stand* table below records where the last session stopped — start at the block **after** it.
 
 ## Where things stand
 
-**Last session ended after block 2** (2026-09-18). **Resume at block 3.**
+**Last session ended after block 2** (2026-09-18). **Resume at block 3 — the homelab, run problem-first for the first time.**
 
 **⚠️ Only Domain 5 remains** — five objectives and **24% of the exam**, the largest single domain. It pairs directly with block 3, which practises exactly this material.
 
@@ -44,8 +44,7 @@ Claude follows this file to pick up where things left off, and updates *Where th
 |---|---|---|
 | **1 · Certification — Network+** | **Domain 4 complete** 2026-09-18 — 4.3 written (device hardening, NAC, key management, security rules, zones) and the Domain 4 quiz scored **19/20**. **20 of 25 objectives done** | **Domain 5** — 5.1 troubleshooting methodology, then 5.2 through 5.5. **The last domain, and the largest at 24%** |
 | **2 · Simulated lab — Packet Tracer** | **6 scenarios done** — STP, double tagging, OSPF, EtherChannel/LACP, HSRP, DHCP relay. NAT scrapped | **Scenario 7 — IPv6 and SLAAC** |
-| **3 · Troubleshooting practice** | **Not started** — block created 2026-09-17 | **Exercise 1 — a scenario ticket** worked through the 5.1 methodology |
-| **4 · Homelab** | Tracked privately | See `progress.md` in the homelab repo |
+| **3 · Homelab** | Tracked privately | See `progress.md` in the homelab repo |
 
 ## Block 2 — Packet Tracer scenario queue
 
@@ -69,24 +68,32 @@ Claude follows this file to pick up where things left off, and updates *Where th
 | **9** | **Wireless channel planning.** Three APs, non-overlapping channels, co-channel interference | 2.3 | Queued |
 | **10** | **QoS.** Voice prioritised over bulk traffic across a congested link | 2.1 | Queued |
 
-## Block 3 — Troubleshooting practice
+## Block 3 — Homelab, built problem-first
 
-**Network+ Domain 5 is 24% of the exam and the one domain that can't be learned by reading.** This block practises it hands-on — **entirely outside the homelab.** Nothing here touches the lab: every exercise is a scenario, a simulator, a capture file, or diagnostic tools pointed at the internet.
+**The build is the troubleshooting practice.** Network+ Domain 5 is 24% of the exam and the one domain that can't be learned by reading — and a real build produces genuine faults continuously, without anything being broken on purpose.
 
-**Every exercise is worked through the 5.1 methodology**, out loud and in order: identify the problem → establish a theory → test it → plan → implement → verify → document. **The method is what's being practised**, more than any single fault.
+**How the block runs — problem-first, not procedure-first.** Claude states **the goal**, **the constraints**, **candidate tools** with one line each on what they are for, and **the success criterion** up front. **Then it is yours to work out.** Claude reviews a plan before it runs, answers questions, and explains commands when asked.
 
-**Formats, rotated one per block:**
+**Ask for a bigger hint when you want one:** *"nudge"* names the layer or component · *"narrow"* names the mechanism or config area · *"command"* gives the syntax, explained.
 
-| Format | What you do | Objectives |
-|---|---|---|
-| **Scenario ticket** | Claude gives a symptom and an environment, and supplies command output only when you ask for the right command. Diagnose it | 5.1 – 5.4 |
-| **Pre-broken Packet Tracer lab** | Open a faulty topology you didn't build and repair it. Cisco Networking Academy troubleshooting activities — the *Network Addressing and Basic Troubleshooting* course is the first to check | 5.1 – 5.3, 5.5 `show` commands |
-| **Packet capture** | Find the fault in someone else's traffic — retransmissions, a failed DHCP exchange, DNS errors. **Wireshark's sample captures** library | 5.3 – 5.5 |
-| **Diagnostic tools** | `ping`, `traceroute`/`tracert`, `nslookup`/`dig`, `netstat`/`ss`, `arp`, `nmap` — on the desktop, **against external targets only**. `scanme.nmap.org` explicitly permits light scanning | 5.5 |
+**Claude interrupts unasked only for** anything irreversible or destructive, a secret about to be exposed, a factual error that would cost an hour, or a silent-failure trap.
 
-**Start with scenario tickets and diagnostic tools** — neither depends on the Domain 5 walkthrough in block 1, which is still ahead. **The Packet Tracer course needs its free scope verified** before relying on it.
+**⚠️ Nothing is broken deliberately.** Fault injection into this lab was considered and rejected — it is a working system carrying a live site, log collection and an IDS, not a training target.
 
-**⚠️ Never scan or test anything you don't own or have explicit permission for.** `scanme.nmap.org` exists for exactly this reason; most of the internet does not.
+### What a build will not teach
+
+**Recorded now so it is a list rather than a guess later.** These Domain 5 areas get little or no exercise from building, and need external practice — simulator activities, capture files, or question practice — before the exam:
+
+| Area | Why the lab misses it |
+|---|---|
+| **Fibre and optical faults** | No fibre until the Phase 4 SFP+ backbone |
+| **PoE** — power budget, incorrect standard | No powered devices yet |
+| **Physical media and terminations** — crosstalk, attenuation, TX/RX transposed, bad terminations | Four short factory patch cables |
+| **Physical tools** — toner and probe, cable tester, visual fault locator | Hardware not owned, and possibly never |
+| **Wireless troubleshooting** — interference, channel overlap, coverage, roaming, disassociation | No access point until Phase 4 |
+| **Cisco `show` command syntax** | RouterOS is a different CLI. **Covered in block 2 instead** |
+
+**When the homelab reaches a stable state, this table becomes block 3's replacement queue.**
 
 ## Parked tracks
 
@@ -102,9 +109,10 @@ Claude follows this file to pick up where things left off, and updates *Where th
 | When | Change |
 |---|---|
 | **Network+ objectives finish** | Block 1 becomes Network+ practice exams |
-| **Network+ passed** | Block 1 moves to **Security+**, and block 3 to Security+ incident-response scenarios. The parked SOC-analyst tracks become candidates to return |
+| **Network+ passed** | Block 1 moves to **Security+**. The parked SOC-analyst tracks become candidates to return |
 | **The Packet Tracer queue empties** | Block 2 becomes **Containerlab** |
-| **A block in 1–3 is skipped three days running** | Replace it. A track being avoided is not being learned |
+| **A block in 1–2 is skipped three days running** | Replace it. A track being avoided is not being learned |
+| **The homelab reaches a stable state** | Block 3 becomes external Domain 5 practice, from the gap table above |
 
 ## Why the lab comes last
 
