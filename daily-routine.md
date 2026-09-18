@@ -36,14 +36,14 @@ Claude follows this file to pick up where things left off, and updates *Where th
 
 ## Where things stand
 
-**Last session ended after block 1** (2026-09-18). **Resume at block 2.**
+**Last session ended after block 2** (2026-09-18). **Resume at block 3.**
 
 **⚠️ Only Domain 5 remains** — five objectives and **24% of the exam**, the largest single domain. It pairs directly with block 3, which practises exactly this material.
 
 | Track | Position | Next |
 |---|---|---|
 | **1 · Certification — Network+** | **Domain 4 complete** 2026-09-18 — 4.3 written (device hardening, NAC, key management, security rules, zones) and the Domain 4 quiz scored **19/20**. **20 of 25 objectives done** | **Domain 5** — 5.1 troubleshooting methodology, then 5.2 through 5.5. **The last domain, and the largest at 24%** |
-| **2 · Simulated lab — Packet Tracer** | **5 scenarios done** — STP, double tagging, OSPF, EtherChannel/LACP, HSRP. NAT scrapped | **Scenario 6 — DHCP relay** |
+| **2 · Simulated lab — Packet Tracer** | **6 scenarios done** — STP, double tagging, OSPF, EtherChannel/LACP, HSRP, DHCP relay. NAT scrapped | **Scenario 7 — IPv6 and SLAAC** |
 | **3 · Troubleshooting practice** | **Not started** — block created 2026-09-17 | **Exercise 1 — a scenario ticket** worked through the 5.1 methodology |
 | **4 · Homelab** | Tracked privately | See `progress.md` in the homelab repo |
 
@@ -63,7 +63,7 @@ Claude follows this file to pick up where things left off, and updates *Where th
 | **3** | **OSPF, single area** | 2.1 | ✅ **Complete.** Adjacencies, AD vs metric, the 100 Mbps reference-bandwidth trap, and **asymmetric routing produced by a one-sided cost change**. Link-failure reconvergence not measured |
 | **4** | **EtherChannel / LACP** | 2.2 | ✅ **Complete.** Blocked port removed from STP's view, **zero loss on member failure** vs 9 pings on PVST+, `src-mac` hashing and the single-flow ceiling. **LACP proven blind to VLAN mismatch — CDP caught it.** Two PT fidelity limits recorded |
 | **5** | **First-hop redundancy (HSRP)** | 2.1 | ✅ **Complete 2026-09-13.** Virtual MAC as the real mechanism, preempt, 8–10 lost pings vs zero on EtherChannel. **Reproduced the blackhole — a router staying active for a subnet it can no longer route out of.** Tracking unsupported in PT |
-| **6** | **DHCP relay.** Central server, remote VLANs, `ip helper-address`, giaddr read in the capture | 3.4 | Queued |
+| **6** | **DHCP relay** | 3.4 | ✅ **Complete 2026-09-18.** Started with both clients failing — a router not forwarding broadcasts is the whole problem. **`giaddr` proven to be what selects the pool**, by deleting one pool and watching a working relay path produce nothing. `giaddr` vs option 3 distinguished, with HSRP as the case where they differ. `ip helper-address` relays eight UDP services, not one. Findings in `objectives/3.4-ipv4-ipv6-services.md` |
 | **7** | **IPv6 and SLAAC.** Dual-stack a segment, watch RA and DAD, compare with DHCPv6 | 1.7 / 3.4 | Queued |
 | **8** | **VLSM and summarisation.** Three sites, one block, subnet by hand then summarise | 1.7 | Queued |
 | **9** | **Wireless channel planning.** Three APs, non-overlapping channels, co-channel interference | 2.3 | Queued |
