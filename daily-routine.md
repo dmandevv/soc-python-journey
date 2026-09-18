@@ -36,13 +36,13 @@ Claude follows this file to pick up where things left off, and updates *Where th
 
 ## Where things stand
 
-**Last session ended after the homelab** (2026-09-17) — **block 4** under the new order. **Resume at block 1.**
+**Last session ended after block 1** (2026-09-18). **Resume at block 2.**
 
-**⚠️ The lab has had most of the last week**, and block 1 was skipped once on 2026-09-13. **19 of 25 Network+ objectives are done, and the largest domain is still ahead:** Domain 5, troubleshooting, five objectives and 24% of the exam.
+**⚠️ Only Domain 5 remains** — five objectives and **24% of the exam**, the largest single domain. It pairs directly with block 3, which practises exactly this material.
 
 | Track | Position | Next |
 |---|---|---|
-| **1 · Certification — Network+** | **4.2 complete** 2026-09-11, quiz **17/20**. **4.3 started** — device hardening written | **4.3 remainder** — NAC, key management, security rules, zones. Then a quiz on all of 4.0. **Then Domain 5** — 5.1 through 5.5, the largest domain at 24% |
+| **1 · Certification — Network+** | **Domain 4 complete** 2026-09-18 — 4.3 written (device hardening, NAC, key management, security rules, zones) and the Domain 4 quiz scored **19/20**. **20 of 25 objectives done** | **Domain 5** — 5.1 troubleshooting methodology, then 5.2 through 5.5. **The last domain, and the largest at 24%** |
 | **2 · Simulated lab — Packet Tracer** | **5 scenarios done** — STP, double tagging, OSPF, EtherChannel/LACP, HSRP. NAT scrapped | **Scenario 6 — DHCP relay** |
 | **3 · Troubleshooting practice** | **Not started** — block created 2026-09-17 | **Exercise 1 — a scenario ticket** worked through the 5.1 methodology |
 | **4 · Homelab** | Tracked privately | See `progress.md` in the homelab repo |
