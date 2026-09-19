@@ -36,7 +36,7 @@ Claude follows this file to pick up where things left off, and updates *Where th
 
 ## Where things stand
 
-**Last session ended after block 1** (2026-09-19). **Resume at block 2.**
+**Last session ended after block 2** (2026-09-19). **Resume at block 3.**
 
 **Block 3 ran problem-first for the first time and it worked** — DoH diagnosed and fixed, and the BIOS items closed without the physical trip they were queued as.
 
@@ -45,7 +45,7 @@ Claude follows this file to pick up where things left off, and updates *Where th
 | Track | Position | Next |
 |---|---|---|
 | **1 · Certification — Network+** | **5.1 complete** 2026-09-19 — the seven-step methodology, quiz **16/19** (one question void). **21 of 25 objectives done.** ⚠️ All three misses were **step-boundary confusions** — test vs verify, implement vs prevent | **5.2 — cabling and physical interface issues.** Then 5.3 through 5.5 |
-| **2 · Simulated lab — Packet Tracer** | **6 scenarios done** — STP, double tagging, OSPF, EtherChannel/LACP, HSRP, DHCP relay. NAT scrapped | **Scenario 7 — IPv6 and SLAAC** |
+| **2 · Simulated lab — Packet Tracer** | **7 scenarios done** — STP, double tagging, OSPF, EtherChannel/LACP, HSRP, DHCP relay, IPv6/SLAAC. NAT scrapped | **Scenario 8 — VLSM and summarisation** |
 | **3 · Homelab** | Tracked privately | See `progress.md` in the homelab repo |
 
 ## Block 2 — Packet Tracer scenario queue
@@ -65,7 +65,7 @@ Claude follows this file to pick up where things left off, and updates *Where th
 | **4** | **EtherChannel / LACP** | 2.2 | ✅ **Complete.** Blocked port removed from STP's view, **zero loss on member failure** vs 9 pings on PVST+, `src-mac` hashing and the single-flow ceiling. **LACP proven blind to VLAN mismatch — CDP caught it.** Two PT fidelity limits recorded |
 | **5** | **First-hop redundancy (HSRP)** | 2.1 | ✅ **Complete 2026-09-13.** Virtual MAC as the real mechanism, preempt, 8–10 lost pings vs zero on EtherChannel. **Reproduced the blackhole — a router staying active for a subnet it can no longer route out of.** Tracking unsupported in PT |
 | **6** | **DHCP relay** | 3.4 | ✅ **Complete 2026-09-18.** Started with both clients failing — a router not forwarding broadcasts is the whole problem. **`giaddr` proven to be what selects the pool**, by deleting one pool and watching a working relay path produce nothing. `giaddr` vs option 3 distinguished, with HSRP as the case where they differ. `ip helper-address` relays eight UDP services, not one. Findings in `objectives/3.4-ipv4-ipv6-services.md` |
-| **7** | **IPv6 and SLAAC.** Dual-stack a segment, watch RA and DAD, compare with DHCPv6 | 1.7 / 3.4 | Queued |
+| **7** | **IPv6 and SLAAC** | 1.7 / 3.4 | ✅ **Complete 2026-09-19.** Started broken on the missing `ipv6 unicast-routing`. **Default gateway is the router's link-local, and the reason is renumbering.** EUI-64 both directions, solicited-node multicast as ARP's replacement, DAD succeeding by silence, M/O flags. **DHCPv6 assigns randomly, not sequentially — sequential would discard IPv6's 2⁶⁴ scan resistance.** Dual-stack means separate firewall rule sets, which is how IPv6 silently bypasses IPv4 controls. Findings in `objectives/3.4-ipv4-ipv6-services.md` |
 | **8** | **VLSM and summarisation.** Three sites, one block, subnet by hand then summarise | 1.7 | Queued |
 | **9** | **Wireless channel planning.** Three APs, non-overlapping channels, co-channel interference | 2.3 | Queued |
 | **10** | **QoS.** Voice prioritised over bulk traffic across a congested link | 2.1 | Queued |
