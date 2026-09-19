@@ -36,13 +36,15 @@ Claude follows this file to pick up where things left off, and updates *Where th
 
 ## Where things stand
 
-**Last session ended after block 2** (2026-09-18). **Resume at block 3 — the homelab, run problem-first for the first time.**
+**Last session ended after block 1** (2026-09-19). **Resume at block 2.**
+
+**Block 3 ran problem-first for the first time and it worked** — DoH diagnosed and fixed, and the BIOS items closed without the physical trip they were queued as.
 
 **⚠️ Only Domain 5 remains** — five objectives and **24% of the exam**, the largest single domain. It pairs directly with block 3, which practises exactly this material.
 
 | Track | Position | Next |
 |---|---|---|
-| **1 · Certification — Network+** | **Domain 4 complete** 2026-09-18 — 4.3 written (device hardening, NAC, key management, security rules, zones) and the Domain 4 quiz scored **19/20**. **20 of 25 objectives done** | **Domain 5** — 5.1 troubleshooting methodology, then 5.2 through 5.5. **The last domain, and the largest at 24%** |
+| **1 · Certification — Network+** | **5.1 complete** 2026-09-19 — the seven-step methodology, quiz **16/19** (one question void). **21 of 25 objectives done.** ⚠️ All three misses were **step-boundary confusions** — test vs verify, implement vs prevent | **5.2 — cabling and physical interface issues.** Then 5.3 through 5.5 |
 | **2 · Simulated lab — Packet Tracer** | **6 scenarios done** — STP, double tagging, OSPF, EtherChannel/LACP, HSRP, DHCP relay. NAT scrapped | **Scenario 7 — IPv6 and SLAAC** |
 | **3 · Homelab** | Tracked privately | See `progress.md` in the homelab repo |
 
